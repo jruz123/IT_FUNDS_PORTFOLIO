@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello and Random Topic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #topic {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello!</h1>
+  <p>click the button to see a random topic:</p>
+  <button onclick="showRandomTopic()">Show Topic</button>
+  <div id="topic"></div>
+
+  <script>
+    const topics = [
+      "Space Exploration",
+      "Artificial Intelligence",
+      "Quantum Physics",
+      "Ancient Civilizations",
+      "Ocean Life",
+      "Renewable Energy",
+      "Virtual Reality"
+    ];
+
+    function showRandomTopic() {
+      const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+      document.getElementById("topic").innerText = "Today's topic: " + randomTopic;
+    }
+  </script>
+</body>
+</html>
